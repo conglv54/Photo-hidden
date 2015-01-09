@@ -13,6 +13,9 @@
 		6E8B87931A5E90EA002B960D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B87921A5E90EA002B960D /* Images.xcassets */; };
 		6E8B87961A5E90EA002B960D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8B87941A5E90EA002B960D /* LaunchScreen.xib */; };
 		6E8B87A21A5E90EA002B960D /* PhotoProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B87A11A5E90EA002B960D /* PhotoProTests.swift */; };
+		6E8B87AC1A5F7330002B960D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B87AB1A5F7330002B960D /* Photos.framework */; };
+		6E8B87AF1A5FD363002B960D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B87AE1A5FD363002B960D /* LoginViewController.swift */; };
+		6E8B87B11A5FD43F002B960D /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B87B01A5FD43F002B960D /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		6E8B879B1A5E90EA002B960D /* PhotoProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B87A01A5E90EA002B960D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E8B87A11A5E90EA002B960D /* PhotoProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProTests.swift; sourceTree = "<group>"; };
+		6E8B87AB1A5F7330002B960D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		6E8B87AE1A5FD363002B960D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6E8B87B01A5FD43F002B960D /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8B87B11A5FD43F002B960D /* LocalAuthentication.framework in Frameworks */,
+				6E8B87AC1A5F7330002B960D /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				6E8B878B1A5E90EA002B960D /* AppDelegate.swift */,
+				6E8B87AE1A5FD363002B960D /* LoginViewController.swift */,
 				6E8B878D1A5E90EA002B960D /* ViewController.swift */,
 				6E8B878F1A5E90EA002B960D /* Main.storyboard */,
 				6E8B87921A5E90EA002B960D /* Images.xcassets */,
@@ -91,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6E8B878A1A5E90EA002B960D /* Info.plist */,
+				6E8B87AD1A5F733C002B960D /* Frameworks */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -110,6 +120,15 @@
 				6E8B87A01A5E90EA002B960D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E8B87AD1A5F733C002B960D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E8B87B01A5FD43F002B960D /* LocalAuthentication.framework */,
+				6E8B87AB1A5F7330002B960D /* Photos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8B87AF1A5FD363002B960D /* LoginViewController.swift in Sources */,
 				6E8B878E1A5E90EA002B960D /* ViewController.swift in Sources */,
 				6E8B878C1A5E90EA002B960D /* AppDelegate.swift in Sources */,
 			);
@@ -336,7 +356,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: appli plus inc.";
 				INFOPLIST_FILE = PhotoPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,7 +368,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: appli plus inc.";
 				INFOPLIST_FILE = PhotoPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
